@@ -1,0 +1,29 @@
+[
+  {
+    "id": "a1",
+    "title": "Port congestion spikes after regional storm disruption",
+    "source": "Maritime Watch",
+    "region": "North Atlantic",
+    "summary": "Shipping delays increased by 18% across major routes following severe weather and subsequent rerouting.",
+    "entities": ["Atlantic Logistics Group", "Port Authority", "Reykjavik"],
+    "classification": "Supply Chain Risk"
+  },
+  {
+    "id": "a2",
+    "title": "Election commission issues revised reporting schedule",
+    "source": "Civic Monitor",
+    "region": "Southeast Europe",
+    "summary": "Authorities published a revised election data release cadence after infrastructure faults in two districts.",
+    "entities": ["National Election Commission", "Sofia", "Voter Registry Service"],
+    "classification": "Political Process"
+  },
+  {
+    "id": "a3",
+    "title": "Telecom outage impacts emergency coordination",
+    "source": "Signal Brief",
+    "region": "East Africa",
+    "summary": "A seven-hour telecom outage disrupted coordination between emergency services and local agencies.",
+    "entities": ["Emergency Operations Center", "Nairobi", "MetroTel"],
+    "classification": "Infrastructure Incident"
+  }
+]
