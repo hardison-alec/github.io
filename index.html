@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenIntel - OSINT & Global News Intelligence</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app-shell">
+      <header class="topbar">
+        <h1>OpenIntel</h1>
+        <p>Investigative OSINT + Global News Intelligence</p>
+      </header>
+
+      <main class="workspace-grid">
+        <section class="panel panel-feed">
+          <h2>Global Feed</h2>
+          <ul id="feed-list" class="scroll"></ul>
+        </section>
+
+        <section class="panel panel-article">
+          <h2>Article Intelligence</h2>
+          <div id="article-detail" class="scroll muted">Select an article from the feed.</div>
+        </section>
+
+        <section class="panel panel-globe">
+          <h2>Interactive Globe</h2>
+          <div id="globe-root" aria-label="Interactive globe visualization"></div>
+        </section>
+
+        <section class="panel panel-case">
+          <h2>Case Board</h2>
+          <button id="pin-article">Pin selected article</button>
+          <ul id="case-items" class="scroll"></ul>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

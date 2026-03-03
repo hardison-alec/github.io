@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openintel.dev/schemas/plugin.schema.json",
+  "title": "OpenIntel Plugin Manifest",
+  "type": "object",
+  "required": ["id", "name", "version", "apiVersion", "capabilities", "entry"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_.-]+$" },
+    "name": { "type": "string", "minLength": 2 },
+    "version": { "type": "string" },
+    "apiVersion": { "type": "string" },
+    "description": { "type": "string" },
+    "author": { "type": "string" },
+    "entry": { "type": "string" },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ingestion.source",
+          "analysis.entityExtractor",
+          "analysis.classifier",
+          "visual.panel",
+          "export.formatter"
+        ]
+      },
+      "minItems": 1
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["network", "filesystem", "clipboard"]
+      }
+    }
+  },
+  "additionalProperties": false
+}
