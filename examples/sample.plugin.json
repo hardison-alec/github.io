@@ -1,0 +1,11 @@
+{
+  "id": "openintel.rss.ingest.default",
+  "name": "Default RSS Ingestion",
+  "version": "0.1.0",
+  "apiVersion": "0.1.0",
+  "description": "Adds a curated RSS source set and ingestion pipeline.",
+  "author": "OpenIntel Core",
+  "entry": "plugins/rss-default/index.js",
+  "capabilities": ["ingestion.source"],
+  "permissions": ["network"]
+}
