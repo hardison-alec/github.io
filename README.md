@@ -1,28 +1,39 @@
-# OpenIntel (Prototype)
+# OpenIntel
 
-A serious open-source OSINT and global news intelligence platform prototype designed for journalists, analysts, and researchers.
+OpenIntel is an OSINT mission platform scaffold combining a SvelteKit frontend, a Tauri desktop shell, and a deep-red operations interface with a Three.js globe.
 
-## What is built right now
+## Current architecture
 
-- Dark-mode, deep-red investigative UI shell
-- Modular panel layout (feed, article intelligence, interactive globe, case board)
-- Interactive Three.js globe with orbit controls and global markers
-- Feed ingestion from local JSON (placeholder for RSS pipeline)
-- Case board pinning flow for analyst workflow simulation
-- Initial plugin manifest schema + example plugin definition
+- **Frontend:** SvelteKit + Vite
+- **Desktop shell:** Tauri v2 (Rust)
+- **3D visualization:** Three.js globe embedded in `src/App.svelte`
+- **Routing shell:** `src/routes/+layout.svelte` + `src/routes/+page.svelte`
 
-## Run locally
+## Project layout
+
+- `src/App.svelte` – mission-control UI and Three.js globe scene
+- `src/styles.css` – deep-red tactical visual design
+- `src/app.html` – SvelteKit HTML template
+- `src-tauri/` – Tauri desktop configuration and Rust entrypoint
+- `index.html` – professional repository landing page
+
+## Local development
 
 ```bash
-python3 -m http.server 4173
+npm install
+npm run dev
 ```
 
-Then open: <http://localhost:4173>
+Open `http://localhost:5173`.
 
-## Next implementation priorities
+## Tauri desktop mode
 
-1. Replace sample feed JSON with real RSS ingestion worker.
-2. Add entity extraction adapters and persistence abstraction.
-3. Expand case board to timeline + relationship graph.
-4. Integrate Hugging Face summarization/classification provider.
-5. Add Tauri wrapper and SQLite adapter.
+```bash
+npm run tauri dev
+```
+
+## Build
+
+```bash
+npm run build
+```

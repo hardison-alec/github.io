@@ -3,40 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OpenIntel - OSINT & Global News Intelligence</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>OpenIntel | SvelteKit + Tauri OSINT Platform</title>
+    <meta
+      name="description"
+      content="OpenIntel is a professional OSINT mission platform built with SvelteKit, Tauri, and Three.js for tactical geospatial analysis."
+    />
+    <style>
+      :root { color-scheme: dark; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Inter, Segoe UI, sans-serif;
+        background: radial-gradient(circle at top, #2b0b13 0, #080102 56%);
+        color: #f7ebee;
+      }
+      article {
+        width: min(900px, 92vw);
+        border-radius: 18px;
+        border: 1px solid #63222d;
+        background: linear-gradient(160deg, #15050a, #0a0204);
+        padding: 2rem;
+        box-shadow: 0 20px 44px #00000070;
+      }
+      h1 { margin-top: 0; font-size: clamp(2rem, 4vw, 3rem); }
+      p { color: #d2b2b9; line-height: 1.5; }
+      .kbd {
+        display: inline-block;
+        border: 1px solid #7b2d3b;
+        background: #2a0b12;
+        border-radius: 8px;
+        padding: 0.14rem 0.45rem;
+        color: #ffe0e6;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+    </style>
   </head>
   <body>
-    <div id="app-shell">
-      <header class="topbar">
-        <h1>OpenIntel</h1>
-        <p>Investigative OSINT + Global News Intelligence</p>
-      </header>
-
-      <main class="workspace-grid">
-        <section class="panel panel-feed">
-          <h2>Global Feed</h2>
-          <ul id="feed-list" class="scroll"></ul>
-        </section>
-
-        <section class="panel panel-article">
-          <h2>Article Intelligence</h2>
-          <div id="article-detail" class="scroll muted">Select an article from the feed.</div>
-        </section>
-
-        <section class="panel panel-globe">
-          <h2>Interactive Globe</h2>
-          <div id="globe-root" aria-label="Interactive globe visualization"></div>
-        </section>
-
-        <section class="panel panel-case">
-          <h2>Case Board</h2>
-          <button id="pin-article">Pin selected article</button>
-          <ul id="case-items" class="scroll"></ul>
-        </section>
-      </main>
-    </div>
-
-    <script type="module" src="src/main.js"></script>
+    <article>
+      <h1>OpenIntel OSINT Mission Platform</h1>
+      <p>
+        Repository initialized with a <strong>SvelteKit frontend</strong>, <strong>Tauri desktop shell</strong>, and a
+        deep-red mission aesthetic featuring a Three.js globe in <code>src/App.svelte</code>.
+      </p>
+      <p>
+        Start development with <span class="kbd">npm install</span> then <span class="kbd">npm run dev</span>.
+        Launch desktop mode with <span class="kbd">npm run tauri dev</span>.
+      </p>
+    </article>
   </body>
 </html>
